@@ -1,5 +1,10 @@
 <?php
-require 'app/Login.php';
+//function that load all classes of path
+function __autoload($str_class){
+    if(file_exists('app/'.$str_class.'.php')){
+        require_once 'app/'.$str_class.'.php';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
